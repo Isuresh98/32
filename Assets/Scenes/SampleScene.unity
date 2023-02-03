@@ -566,11 +566,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1861937717083439777, guid: a692e25590113c94c8b88a701f591cdf,
-        type: 3}
-      propertyPath: BulatSpeed
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 5352863111671990739, guid: a692e25590113c94c8b88a701f591cdf,
         type: 3}
       propertyPath: m_Name
