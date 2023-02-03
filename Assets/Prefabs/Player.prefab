@@ -158,10 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83cb5bf1922360f46bf2c0eb371dc557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulatPrefabs: {fileID: 173628854878294572, guid: 625a95740e8139b4fb1998ffedd278b1,
+  BulatPrefabs: {fileID: 173628854878294572, guid: 625a95740e8139b4fb1998ffedd278b1,
     type: 3}
-  bularPoint: {fileID: 7082735845312249861}
-  _bulatSpeed: 250
+  BulatPoint: {fileID: 7082735845312249861}
+  BulatSpeed: 250
 --- !u!1 &7082735845312249861
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7082735845312249861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.3, z: 0}
+  m_LocalPosition: {x: -0.09, y: 2.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5352863111671990751}

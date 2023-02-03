@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
 {
-    public GameObject _bulatPrefabs;
-    public GameObject bularPoint;
-    public float _bulatSpeed;
-    Vector3 mousePos;
-    Vector3 worlPos;
+    public GameObject BulatPrefabs;
+    public GameObject BulatPoint;
+    public float BulatSpeed;
+    Vector3 _mousePoss;
+    Vector3 _worlPoss;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,23 +20,21 @@ public class Player_Shoot : MonoBehaviour
     {
         Shoot();
     }
+    
     private void Shoot()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
-            mousePos = Input.mousePosition;
-            worlPos = Camera.main.ScreenToWorldPoint(mousePos);
-            Vector2 roundPos = new Vector2(Mathf.RoundToInt(worlPos.x), Mathf.RoundToInt(worlPos.y));
+            _mousePoss = Input.mousePosition;
+            _worlPoss = Camera.main.ScreenToWorldPoint(_mousePoss);
+            Vector2 roundPos = new Vector2(Mathf.RoundToInt(_worlPoss.x), Mathf.RoundToInt(_worlPoss.y));
 
-            GameObject bullat = Instantiate(_bulatPrefabs, bularPoint.transform.position, Quaternion.identity);
+            GameObject Bullet = Instantiate(BulatPrefabs, BulatPoint.transform.position, Quaternion.identity);
 
-            Rigidbody2D _rbody = bullat.GetComponent<Rigidbody2D>();
-            Vector2 direction = (roundPos - (Vector2) bularPoint.transform.position).normalized;
-            _rbody.velocity = direction * _bulatSpeed * Time.deltaTime;
-            Destroy(bullat, 2f);
-            
-
+            Rigidbody2D rbody = Bullet.GetComponent<Rigidbody2D>();
+            Vector2 Direction = (roundPos-(Vector2)BulatPoint.transform.position).normalized;
+            rbody.velocity = Direction * BulatSpeed * Time.deltaTime;
+            Destroy(Bullet, 1f);
         }
     }
 }
