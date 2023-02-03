@@ -4,37 +4,38 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float speed = 10f;
-    private Rigidbody2D rb2d;
-    private Vector2 movement;
-    float horizontal;
-    float vertical;
+    public float Speed;
+    private Rigidbody2D _rbody;
+    private Vector2 Movement;
+    float horizontalInput;
+    float verticalInput;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        _rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        Rotet();
+        Rotetion();
     }
     private void FixedUpdate()
     {
-        movement = new Vector2(horizontal, vertical);
-        movement = Quaternion.Euler(0, 0, transform.eulerAngles.z) * movement;
-        rb2d.AddForce(movement * speed*Time.deltaTime);
+        Movement = new Vector2(horizontalInput, verticalInput);
+        Movement = Quaternion.Euler(0, 0, transform.eulerAngles.z) * Movement;
+        _rbody.AddForce(Movement * Speed * Time.deltaTime);
     }
 
     private void Move()
     {
-        horizontal = Input.GetAxis("Horizontal");
-         vertical = Input.GetAxis("Vertical");
-        
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
     }
-    private void Rotet()
+
+    private void Rotetion()
     {
         if (Input.GetKey(KeyCode.LeftAlt))
         {
@@ -44,7 +45,5 @@ public class Player_Movement : MonoBehaviour
         {
             transform.Rotate(0, 0, -45 * Time.deltaTime);
         }
-
-
     }
 }
