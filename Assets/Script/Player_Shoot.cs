@@ -37,5 +37,4 @@ public class Player_Shoot : MonoBehaviour
             Destroy(Bullet, 1f);
         }
     }
-
 }
