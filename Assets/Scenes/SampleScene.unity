@@ -488,8 +488,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947081819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.34, y: -2.12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.34, y: 2.31, z: 0}
+  m_LocalScale: {x: 0.40214255, y: 0.3754721, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -746,8 +746,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753353848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.99, y: 2.51, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4, y: 2.31, z: 0}
+  m_LocalScale: {x: 0.48114806, y: 0.45923954, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 1810850433}
   - component: {fileID: 1810850432}
   - component: {fileID: 1810850431}
+  - component: {fileID: 1810850435}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Asteroid
@@ -805,9 +806,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.16376723, y: 0}
   serializedVersion: 2
-  m_Radius: 1.21
+  m_Radius: 0.89209926
 --- !u!212 &1810850433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -866,12 +867,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810850430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.293368, y: 2.0228963, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.16, y: 0.44, z: 0}
+  m_LocalScale: {x: 1.4846026, y: 1.1448271, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810850435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810850430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3f872a591e5cc4f8378e9d20d943e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &797937431782674266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,12 +984,12 @@ PrefabInstance:
     - target: {fileID: 5352863111671990751, guid: a692e25590113c94c8b88a701f591cdf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5352863111671990751, guid: a692e25590113c94c8b88a701f591cdf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 5352863111671990751, guid: a692e25590113c94c8b88a701f591cdf,
         type: 3}
