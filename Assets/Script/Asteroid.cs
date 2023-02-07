@@ -8,6 +8,8 @@ public class Asteroid : MonoBehaviour
     private int _asteroidHelth = 3;
     private int _destroyeCount;
     private Player_Movement _playerScript;
+    public GameObject prefab;
+    private bool isInstantiated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,11 @@ public class Asteroid : MonoBehaviour
 
             _destroyeCount += 5;
             _playerScript.UpdateScore(_destroyeCount);
+            if (!isInstantiated)
+            {
+                Instantiate(prefab, transform.position, Quaternion.identity);
+                isInstantiated = true;
+            }
         }
         
     }

@@ -52,4 +52,5 @@ public class Player_Movement : MonoBehaviour
         DisplayeScorCount += AsroideDistroy;
     }
     
+    
 }
