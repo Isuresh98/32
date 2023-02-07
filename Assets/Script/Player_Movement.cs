@@ -52,13 +52,13 @@ public class Player_Movement : MonoBehaviour
     {
         DisplayeScorCount += AsroideDistroy;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-            Coins+=1;
+            Coins += 1;
             Destroy(collision.gameObject);
         }
     }
-
 }

@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3f872a591e5cc4f8378e9d20d943e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2400386919275166421, guid: 86374d8644371234e9c30980e74c46a8, type: 3}
+  CoinPrefabs: {fileID: 2400386919275166421, guid: 86374d8644371234e9c30980e74c46a8,
+    type: 3}
