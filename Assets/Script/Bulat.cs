@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bulat : MonoBehaviour
 {
+    private int _destroyeCount;
     private Player_Movement _playerScript;
-    private int _destroyAstroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +27,9 @@ public class Bulat : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            _destroyAstroy += 1;
-            _playerScript.UpdateScore(_destroyAstroy);
+            _destroyeCount += 1;
+            _playerScript.UpdateScore(_destroyeCount);
+            
         }
     }
 }

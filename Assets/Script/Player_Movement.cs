@@ -9,7 +9,7 @@ public class Player_Movement : MonoBehaviour
     private Vector2 Movement;
     float horizontalInput;
     float verticalInput;
-    public int DisplayScoreCount;
+   public int DisplayeScorCount;
     
     // Start is called before the first frame update
     void Start()
@@ -47,9 +47,9 @@ public class Player_Movement : MonoBehaviour
             transform.Rotate(0, 0, -45 * Time.deltaTime);
         }
     }
-    public void UpdateScore(int AstroDistroy)
+    public void UpdateScore(int AsroideDistroy)
     {
-        DisplayScoreCount += AstroDistroy;
-
+        DisplayeScorCount += AsroideDistroy;
     }
+    
 }
