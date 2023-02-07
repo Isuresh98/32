@@ -10,6 +10,7 @@ public class Player_Movement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
    public int DisplayeScorCount;
+    public int Coins;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,13 @@ public class Player_Movement : MonoBehaviour
     {
         DisplayeScorCount += AsroideDistroy;
     }
-    
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Coins+=1;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
