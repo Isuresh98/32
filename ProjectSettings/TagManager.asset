@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - Asteroid
-  - Ast1
+  - AstSmall
+  - AstBig
   layers:
   - Default
   - TransparentFX

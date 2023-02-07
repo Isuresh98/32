@@ -6,10 +6,12 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     private int _asteroidHelth = 3;
+    private Player_Movement _playerScript;
+    private int _destroyAstroy;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _playerScript = FindObjectOfType<Player_Movement>();
     }
 
     // Update is called once per frame
@@ -18,6 +20,9 @@ public class Asteroid : MonoBehaviour
         if (_asteroidHelth <= 0)
         {
             Destroy(this.gameObject);
+            _destroyAstroy += 5;
+            _playerScript.UpdateScore(_destroyAstroy);
+
         }
         
     }

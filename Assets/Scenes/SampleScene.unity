@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 947081820}
   m_Layer: 0
   m_Name: Asteroid3
-  m_TagString: Ast1
+  m_TagString: AstSmall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1753353849}
   m_Layer: 0
   m_Name: Asteroid1
-  m_TagString: Ast1
+  m_TagString: AstSmall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 1810850435}
   m_Layer: 0
   m_Name: Asteroid2
-  m_TagString: Asteroid
+  m_TagString: AstBig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
