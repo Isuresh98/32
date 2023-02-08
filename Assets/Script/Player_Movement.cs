@@ -11,15 +11,14 @@ public class Player_Movement : MonoBehaviour
     float verticalInput;
    public int DisplayeScorCount;
     public int Coins;
-    public GameObject Partical;
+    private GameObject _partical;
     
     // Start is called before the first frame update
     void Start()
     {
         _rbody = GetComponent<Rigidbody2D>();
-        Partical = GameObject.FindWithTag("Partical");
-
-        Partical.SetActive(false);
+        _partical = GameObject.FindWithTag("Partical");
+        _partical.SetActive(false);
     }
 
     // Update is called once per frame
@@ -63,7 +62,7 @@ public class Player_Movement : MonoBehaviour
         {
             Coins += 1;
             Destroy(collision.gameObject);
-            Partical.SetActive(true);
+            _partical.SetActive(true);
         }
     }
 }
