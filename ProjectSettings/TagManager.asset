@@ -8,6 +8,8 @@ TagManager:
   - AstSmall
   - AstBig
   - Coin
+  - Pflame
+  - Partical
   layers:
   - Default
   - TransparentFX
