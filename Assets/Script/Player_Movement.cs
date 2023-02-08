@@ -11,11 +11,14 @@ public class Player_Movement : MonoBehaviour
     float verticalInput;
    public int DisplayeScorCount;
     public int Coins;
+    public ParticleSystem Partical;
     
     // Start is called before the first frame update
     void Start()
     {
         _rbody = GetComponent<Rigidbody2D>();
+        Partical = GetComponent<ParticleSystem>();
+        Partical.Stop();
     }
 
     // Update is called once per frame
@@ -59,6 +62,7 @@ public class Player_Movement : MonoBehaviour
         {
             Coins += 1;
             Destroy(collision.gameObject);
+            Partical.Play();
         }
     }
 }
