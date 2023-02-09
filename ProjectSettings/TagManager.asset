@@ -10,6 +10,8 @@ TagManager:
   - Coin
   - Pflame
   - Partical
+  - Enemy
+  - SpownPoint
   layers:
   - Default
   - TransparentFX
