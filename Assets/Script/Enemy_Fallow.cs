@@ -26,7 +26,7 @@ public class Enemy_Fallow : MonoBehaviour
     private void FlowwoEnemy()
     {
         _rBody.AddForce(transform.up* Speed* Time.deltaTime);
-        Destroy(this.gameObject, 5f);
+        Destroy(this.gameObject, 3f);
 
         /* if (_targetPlayer != null)
          {
