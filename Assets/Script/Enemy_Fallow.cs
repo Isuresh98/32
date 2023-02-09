@@ -4,33 +4,31 @@ using UnityEngine;
 
 public class Enemy_Fallow : MonoBehaviour
 {
-    public float speed = 5f;
-    public float stopDistance = 2f;
+    public float Speed = 3f;
+    public float StopDistans = 3f;
 
     private GameObject _targetPlayer;
-    private Rigidbody2D rb2d;
+    private float _distans;
     // Start is called before the first frame update
     void Start()
     {
-
-        rb2d = GetComponent<Rigidbody2D>();
         _targetPlayer = GameObject.FindWithTag("Player");
-
+     
     }
     // Update is called once per frame
     void Update()
     {
-        FollowTarget();
+        FlowwoEnemy();
     }
 
-    private void FollowTarget()
+    private void FlowwoEnemy()
     {
         if (_targetPlayer != null)
         {
-            float distance = Vector2.Distance(transform.position, _targetPlayer.transform.position);
-            if (distance > stopDistance)
+            _distans = Vector2.Distance(transform.position, _targetPlayer.transform.position);
+            if (_distans > StopDistans)
             {
-                transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.transform.position, Speed * Time.deltaTime);
             }
         }
     }

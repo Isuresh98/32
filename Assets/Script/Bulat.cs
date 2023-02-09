@@ -33,12 +33,5 @@ public class Bulat : MonoBehaviour
         }
        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-        }
-    }
+   
 }
