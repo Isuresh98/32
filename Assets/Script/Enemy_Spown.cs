@@ -32,7 +32,7 @@ public class Enemy_Spown : MonoBehaviour
 
     private void SpownEnemy()
     {
-        Instantiate(_enemyPrefabs, _spowPoint.transform.position, Quaternion.identity);
+        Instantiate(_enemyPrefabs, _spowPoint.transform.position,transform.rotation);
     }
 
 }
