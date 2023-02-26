@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5390752832813239597}
   - component: {fileID: 5390752832813239570}
   - component: {fileID: 5390752832813239596}
-  - component: {fileID: 791098303877702605}
+  - component: {fileID: 337724685900958866}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 250
   StopDistans: 3
---- !u!114 &791098303877702605
+--- !u!114 &337724685900958866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06408df0aef22b24f8545b7b21c6d1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 8217696459419538985, guid: c5479e6cf24382847937fcb29744bfb3,
+  _bulatprefabs: {fileID: 8217696459419538985, guid: c5479e6cf24382847937fcb29744bfb3,
     type: 3}
-  _spawnPoint: {fileID: 3183294596069875410}
-  SpawnTimeMin: 0.5
-  SpawnTimeMax: 1
+  _spownPoint: {fileID: 3183294596069875410}
+  SpownTimeMin: 1
+  SpownTimeMax: 2
   Zaxes: 180
 --- !u!1 &9076750726550839119
 GameObject:

@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class EnemyBulletSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private Transform _spawnPoint;
-    public float SpawnTimeMin = 1f;
-    public float SpawnTimeMax = 3f;
-    private float _nextSpawnTime;
+    [SerializeField] private GameObject _bulatprefabs;
+    [SerializeField] private Transform _spownPoint;
+    public float SpownTimeMin = 1f;
+    public float SpownTimeMax = 3f;
+    private float _nextSpownTime;
     [SerializeField] float Zaxes;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set the time for the first bullet spawn
-        _nextSpawnTime = Time.time + Random.Range(SpawnTimeMin, SpawnTimeMax);
+        _nextSpownTime = Time.time + Random.Range(SpownTimeMin, SpownTimeMax);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // If it's time to spawn a bullet
-        if (Time.time >= _nextSpawnTime)
+        if (Time.time >= _nextSpownTime)
         {
-            // Spawn the bullet at the spawn point
-            Instantiate(_bulletPrefab, _spawnPoint.position, Quaternion.Euler(0f,0f,Zaxes));
+            Instantiate(_bulatprefabs, _spownPoint.position, Quaternion.Euler(0f, 0f, Zaxes));
 
-            // Set the time for the next bullet spawn
-            _nextSpawnTime = Time.time + Random.Range(SpawnTimeMin, SpawnTimeMax);
+            _nextSpownTime = Time.time + Random.Range(SpownTimeMin, SpownTimeMax);
         }
     }
 }
