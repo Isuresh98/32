@@ -27,15 +27,5 @@ public class Enemy_Fallow : MonoBehaviour
     {
         _rBody.AddForce(transform.up* Speed* Time.deltaTime);
         Destroy(this.gameObject, 3f);
-
-        /* if (_targetPlayer != null)
-         {
-             _distans = Vector2.Distance(transform.position, _targetPlayer.transform.position);
-             if (_distans > StopDistans)
-             {
-                 transform.position = Vector2.MoveTowards(transform.position, _targetPlayer.transform.position, Speed * Time.deltaTime);
-             }
-         }
-        */
     }
 }

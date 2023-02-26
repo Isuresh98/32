@@ -12,6 +12,8 @@ TagManager:
   - Partical
   - Enemy
   - SpownPoint
+  - _startPoint
+  - _endPoint
   layers:
   - Default
   - TransparentFX

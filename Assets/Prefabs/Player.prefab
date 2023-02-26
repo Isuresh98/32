@@ -52,6 +52,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -146,10 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aa2c03aeb08a346881fc9350b09175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 100
+  Speed: 200
   DisplayeScorCount: 0
   Coins: 0
-  Partical: {fileID: 5782645805917798757}
 --- !u!114 &1861937717083439777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   BulatPrefabs: {fileID: 173628854878294572, guid: 625a95740e8139b4fb1998ffedd278b1,
     type: 3}
   BulatPoint: {fileID: 7082735845312249861}
-  BulatSpeed: 250
+  BulatSpeed: 500
 --- !u!1 &6051650237446481385
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,12 +320,6 @@ PrefabInstance:
 --- !u!4 &5949461419803288473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4746607902619854, guid: e100e551c2461e548b4cdfba7666c839,
-    type: 3}
-  m_PrefabInstance: {fileID: 5944864345537665879}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &5782645805917798757 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198284934849911346, guid: e100e551c2461e548b4cdfba7666c839,
     type: 3}
   m_PrefabInstance: {fileID: 5944864345537665879}
   m_PrefabAsset: {fileID: 0}
