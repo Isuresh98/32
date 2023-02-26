@@ -11,13 +11,14 @@ public class Enemy_Fallow : MonoBehaviour
     private float _distans;
     private Rigidbody2D _rBody;
 
-    private Enemy_Spown _enemySpawner;
+    private Enemy_Spown _enemySpowner;
+  
     // Start is called before the first frame update
     void Start()
     {
         _targetPlayer = GameObject.FindWithTag("Player");
         _rBody = GetComponent<Rigidbody2D>();
-        _enemySpawner = FindObjectOfType<Enemy_Spown>();
+        _enemySpowner = FindObjectOfType<Enemy_Spown>();
     }
     // Update is called once per frame
     void Update()
@@ -41,16 +42,13 @@ public class Enemy_Fallow : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        
-       if (collision.gameObject.CompareTag("Bottampos"))
+        if (collision.gameObject.CompareTag("Bottampos"))
         {
-
-            //enemy destroye and  after destroye enemy  set random Enemy_Spown script and set 
-            // Destroy the enemy
+            
             Destroy(gameObject);
 
-            // Respawn the enemy in a random location
-            _enemySpawner.SpawnEnemyRandom();
+            _enemySpowner.SpownEnemyRandom();
         }
+
     }
 }

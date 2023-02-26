@@ -41,12 +41,12 @@ public class Enemy_Spown : MonoBehaviour
         Instantiate(_enemyPrefabs, randomPoint, Quaternion.Euler(0f,0f,zaxise));
     }
 
-    public void SpawnEnemyRandom()
+   public void SpownEnemyRandom()
     {
-        // Get random point
+        // get random point
         Vector3 randomPoint = Vector3.Lerp(_startPoint.transform.position, _endPoint.transform.position, Random.value);
 
-        // Instantiate enemy
+        //instansiate 
         Instantiate(_enemyPrefabs, randomPoint, Quaternion.Euler(0f, 0f, zaxise));
     }
 
