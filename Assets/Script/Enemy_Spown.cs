@@ -34,13 +34,6 @@ public class Enemy_Spown : MonoBehaviour
 
    public void SpownEnemy()
     {
-        // Get all Enemy_Spown objects in the scene
-        Enemy_Spown[] spawners = GameObject.FindObjectsOfType<Enemy_Spown>();
-
-        // Choose a random spawner from the list
-        int randomIndex = Random.Range(0, spawners.Length);
-        Enemy_Spown randomSpawner = spawners[randomIndex];
-
         // get random point
         Vector3 randomPoint = Vector3.Lerp(_startPoint.transform.position, _endPoint.transform.position, Random.value);
 
