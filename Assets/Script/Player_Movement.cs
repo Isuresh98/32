@@ -74,5 +74,10 @@ public class Player_Movement : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("EnemyA"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
