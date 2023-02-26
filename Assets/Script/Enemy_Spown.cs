@@ -11,6 +11,7 @@ public class Enemy_Spown : MonoBehaviour
     public float SpownTimeMax = 2f;
     private float nextSpownTime;
     [SerializeField] float zaxise;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +32,29 @@ public class Enemy_Spown : MonoBehaviour
         }
     }
 
-    private void SpownEnemy()
+   public void SpownEnemy()
     {
+        // Get all Enemy_Spown objects in the scene
+        Enemy_Spown[] spawners = GameObject.FindObjectsOfType<Enemy_Spown>();
+
+        // Choose a random spawner from the list
+        int randomIndex = Random.Range(0, spawners.Length);
+        Enemy_Spown randomSpawner = spawners[randomIndex];
+
         // get random point
         Vector3 randomPoint = Vector3.Lerp(_startPoint.transform.position, _endPoint.transform.position, Random.value);
 
         //instansiate 
         Instantiate(_enemyPrefabs, randomPoint, Quaternion.Euler(0f,0f,zaxise));
     }
+
+    public void SpawnEnemyRandom()
+    {
+        // Get random point
+        Vector3 randomPoint = Vector3.Lerp(_startPoint.transform.position, _endPoint.transform.position, Random.value);
+
+        // Instantiate enemy
+        Instantiate(_enemyPrefabs, randomPoint, Quaternion.Euler(0f, 0f, zaxise));
+    }
+
 }

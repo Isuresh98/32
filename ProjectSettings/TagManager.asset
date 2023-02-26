@@ -15,6 +15,7 @@ TagManager:
   - _startPoint
   - _endPoint
   - Ebullat
+  - Bottampos
   layers:
   - Default
   - TransparentFX
