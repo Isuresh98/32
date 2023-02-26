@@ -64,5 +64,15 @@ public class Player_Movement : MonoBehaviour
             Destroy(collision.gameObject);
             _partical.SetActive(true);
         }
+
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ebullat"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }

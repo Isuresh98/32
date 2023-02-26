@@ -28,4 +28,16 @@ public class Enemy_Fallow : MonoBehaviour
         _rBody.AddForce(transform.up* Speed* Time.deltaTime);
         Destroy(this.gameObject, 3f);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
